@@ -1,0 +1,16 @@
+# Virtual environment
+.venv/
+
+# Raw Yahoo Finance data: not redistributed (Yahoo terms of use).
+# Recreate with: python run_all.py --refresh
+data/raw/*
+!data/raw/.gitkeep
+
+# Python / Jupyter caches
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store

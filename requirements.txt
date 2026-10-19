@@ -1,0 +1,13 @@
+# Core libraries used by the code
+pandas==3.0.6
+numpy==2.5.4
+scipy==1.18.1
+matplotlib==3.11.2
+yfinance==1.7.0
+arch==8.0.0
+
+# Tooling only: tests and running the notebook
+pytest==9.1.1
+jupyter==1.1.1
+nbconvert==7.17.2
+ipykernel==7.4.0

@@ -1,0 +1,142 @@
+Loaded existing snapshot prices_2026-10-19.csv
+Snapshot: prices_2026-10-19.csv
+Date alignment (inner join): 0 of 2998 dates dropped
+Missing prices per ticker before alignment: {'SAP.DE': 0, 'SIE.DE': 0, 'ALV.DE': 0, 'BAS.DE': 0, 'DTE.DE': 0}
+Dates dropped by inner join: 0
+Price data: 2015-01-02 to 2026-10-16, 2998 trading days
+
+Single-day returns with |r| > 15% (4 found):
+        Date  Ticker  return
+0 2020-03-12  ALV.DE -15.33%
+1 2020-03-24  ALV.DE  15.80%
+2 2020-10-26  SAP.DE -21.94%
+3 2026-01-29  SAP.DE -16.07%
+
+Daily returns around the Siemens Energy spin-off (first trading day 28 Sep 2020):
+            SIE.DE  ^GDAXI
+Date                      
+2020-09-21  -4.66%  -4.37%
+2020-09-22   0.77%   0.41%
+2020-09-23  -0.60%   0.39%
+2020-09-24   1.03%  -0.29%
+2020-09-25  -1.60%  -1.09%
+2020-09-28   9.22%   3.22%
+2020-09-29  -1.20%  -0.35%
+2020-09-30  -0.70%  -0.51%
+2020-10-01  -1.13%  -0.23%
+2020-10-02  -0.73%  -0.33%
+
+Portfolio returns: 2997 days, mean 0.0536%, daily std 1.2212%, min -12.03%, max 10.09%
+
+First forecast day per model:
+HS250_95        2015-12-28
+HS500_95        2016-12-20
+EWMA_95         2015-12-28
+GARCH-N_95      2016-12-20
+GARCH-t_95      2016-12-20
+HS250_97.5      2015-12-28
+HS500_97.5      2016-12-20
+EWMA_97.5       2015-12-28
+GARCH-N_97.5    2016-12-20
+GARCH-t_97.5    2016-12-20
+HS250_99        2015-12-28
+HS500_99        2016-12-20
+EWMA_99         2015-12-28
+GARCH-N_99      2016-12-20
+GARCH-t_99      2016-12-20
+
+Common backtest period: 2016-12-20 to 2026-10-16 (2497 days)
+
+Backtest results:
+  model confidence  n_obs expected_breaches  actual_breaches breach_rate kupiec_LR kupiec_p  kupiec_reject  n11 ind_LR ind_p  ind_reject cc_LR  cc_p  cc_reject basel_latest_count basel_latest_zone share_green share_yellow share_red
+  HS250        95%   2497             124.9              141       5.65%      2.11    0.146          False   17   9.00 0.003        True 11.11 0.004       True                                                                        
+  HS500        95%   2497             124.9              121       4.85%      0.13    0.722          False   18  18.81 0.000        True 18.94 0.000       True                                                                        
+   EWMA        95%   2497             124.9              148       5.93%      4.28    0.039           True   15   4.22 0.040        True  8.49 0.014       True                                                                        
+GARCH-N        95%   2497             124.9              130       5.21%      0.22    0.638          False   15   8.56 0.003        True  8.78 0.012       True                                                                        
+GARCH-t        95%   2497             124.9              142       5.69%      2.38    0.123          False   14   4.10 0.043        True  6.48 0.039       True                                                                        
+  HS250        99%   2497              25.0               34       1.36%      2.96    0.085          False    3   6.53 0.011        True  9.50 0.009       True                  0             green         59%          35%        6%
+  HS500        99%   2497              25.0               37       1.48%      5.10    0.024           True    4   9.67 0.002        True 14.77 0.001       True                  2             green         68%          21%       11%
+   EWMA        99%   2497              25.0               57       2.28%     30.45    0.000           True    3   1.72 0.190       False 32.17 0.000       True                  5            yellow         21%          70%        9%
+GARCH-N        99%   2497              25.0               46       1.84%     14.33    0.000           True    3   3.49 0.062       False 17.82 0.000       True                  5            yellow         40%          49%       11%
+GARCH-t        99%   2497              25.0               29       1.16%      0.62    0.429          False    1   0.88 0.348       False  1.51 0.471      False                  3             green         81%          19%        0%
+
+Breaches per calendar year:
+      HS250_95  HS500_95  EWMA_95  GARCH-N_95  GARCH-t_95  HS250_99  HS500_99  EWMA_99  GARCH-N_99  GARCH-t_99
+year                                                                                                          
+2016         0         0        0           0           0         0         0        0           0           0
+2017        11         0       16           7          12         3         0        2           0           0
+2018        21        26       21          19          21         5         6        6           6           3
+2019        11        12       14          13          14         2         3        7           5           2
+2020        22        26       16          18          20         8        15       10          12           8
+2021        10         4       13          13          13         1         1        6           4           3
+2022        15        13       13          15          15         4         1        6           6           4
+2023         9         4       14          10          11         1         0        6           2           2
+2024        17         9       16          13          12         4         1        5           1           0
+2025        15        17       15          12          13         6         8        4           5           4
+2026        10        10       10          10          11         0         2        5           5           3
+
+Expected Shortfall check (on VaR breach days at the same level):
+  model confidence  n_breaches avg_realised_loss avg_es_forecast ratio
+  HS250      97.5%          78             3.04%           2.90%  1.05
+  HS500      97.5%          71             3.29%           3.19%  1.03
+   EWMA      97.5%          96             2.68%           2.28%  1.18
+GARCH-N      97.5%          81             2.90%           2.48%  1.17
+GARCH-t      97.5%          74             2.97%           2.95%  1.01
+  HS250      99.0%          34             3.61%           3.14%  1.15
+  HS500      99.0%          37             3.90%           4.21%  0.93
+   EWMA      99.0%          57             3.13%           2.67%  1.17
+GARCH-N      99.0%          46             3.40%           2.86%  1.19
+GARCH-t      99.0%          29             3.92%           3.87%  1.01
+
+Breach rates by volatility regime (descriptive, rule fixed in advance; calm 1457 days, turbulent 1040 days):
+regime              calm  turbulent
+confidence model                   
+0.95       HS250   5.63%      5.67%
+           HS500   4.12%      5.87%
+           EWMA    7.07%      4.33%
+           GARCH-N 5.22%      5.19%
+           GARCH-t 5.90%      5.38%
+0.99       HS250   1.24%      1.54%
+           HS500   1.03%      2.12%
+           EWMA    2.47%      2.02%
+           GARCH-N 1.65%      2.12%
+           GARCH-t 1.03%      1.35%
+
+GARCH-N: 125 refits, 0 convergence failures, alpha+beta range 0.838-0.991
+
+GARCH-t: 125 refits, 0 convergence failures, alpha+beta range 0.815-1.000, nu range 3.8-9.0
+
+Siemens sensitivity: SIE.DE return on 2020-09-28 replaced 9.22% -> 3.22% (DAX); portfolio return 4.30% -> 3.10%
+EWMA_99: breach status changed on 2020-10-15
+Traffic-light windows whose zone changed: {'HS250_99': 0, 'HS500_99': 0, 'EWMA_99': 65, 'GARCH-N_99': 0, 'GARCH-t_99': 0}
+Rows with any change in breaches / test result / Basel zone:
+model                       EWMA
+confidence                  0.99
+actual_breaches_raw           57
+kupiec_reject_raw           True
+ind_reject_raw             False
+cc_reject_raw               True
+basel_latest_zone_raw     yellow
+share_green_raw          0.20863
+share_yellow_raw        0.700178
+share_red_raw           0.091192
+actual_breaches_sens          58
+kupiec_reject_sens          True
+ind_reject_sens            False
+cc_reject_sens              True
+basel_latest_zone_sens    yellow
+share_green_sens        0.191726
+share_yellow_sens       0.705071
+share_red_sens          0.103203
+
+GARCH robustness: first fit after 1000 days instead of 500. Backtest 2018-12-05 to 2026-10-16 (1997 days instead of 2497).
+Largest VaR difference vs the main specification on the same days: 0.00e+00
+  model confidence  n_obs_main  actual_breaches_main breach_rate_main  kupiec_reject_main  ind_reject_main  cc_reject_main basel_latest_zone_main share_red_main  n_obs_rob  actual_breaches_rob breach_rate_rob  kupiec_reject_rob  ind_reject_rob  cc_reject_rob basel_latest_zone_rob share_red_rob  decision_changed
+GARCH-N        95%        2497                   130            5.21%               False             True            True                    NaN            NaN       1997                  107           5.36%              False            True           True                   NaN           NaN             False
+GARCH-t        95%        2497                   142            5.69%               False             True            True                    NaN            NaN       1997                  112           5.61%              False           False          False                   NaN           NaN              True
+GARCH-N        99%        2497                    46            1.84%                True            False            True                 yellow            11%       1997                   41           2.05%               True           False           True                yellow           14%             False
+GARCH-t        99%        2497                    29            1.16%               False            False           False                  green             0%       1997                   27           1.35%              False           False          False                 green            0%             False
+Any test decision or latest Basel zone changed: True
+
+Sanity checks:
+CHECK: EWMA at 99.0% has 57 breaches vs 25.0 expected (ratio 2.28).

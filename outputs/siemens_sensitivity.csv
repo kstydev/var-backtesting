@@ -1,0 +1,11 @@
+model,confidence,actual_breaches_raw,kupiec_reject_raw,ind_reject_raw,cc_reject_raw,basel_latest_zone_raw,share_green_raw,share_yellow_raw,share_red_raw,actual_breaches_sens,kupiec_reject_sens,ind_reject_sens,cc_reject_sens,basel_latest_zone_sens,share_green_sens,share_yellow_sens,share_red_sens,actual_breaches_changed,kupiec_reject_changed,ind_reject_changed,cc_reject_changed,basel_latest_zone_changed,share_green_changed,share_yellow_changed,share_red_changed
+HS250,0.95,141,False,True,True,,,,,141,False,True,True,,,,,False,False,False,False,False,False,False,False
+HS500,0.95,121,False,True,True,,,,,121,False,True,True,,,,,False,False,False,False,False,False,False,False
+EWMA,0.95,148,True,True,True,,,,,148,True,True,True,,,,,False,False,False,False,False,False,False,False
+GARCH-N,0.95,130,False,True,True,,,,,130,False,True,True,,,,,False,False,False,False,False,False,False,False
+GARCH-t,0.95,142,False,True,True,,,,,142,False,True,True,,,,,False,False,False,False,False,False,False,False
+HS250,0.99,34,False,True,True,green,0.5920818505338078,0.3474199288256228,0.060498220640569395,34,False,True,True,green,0.5920818505338078,0.3474199288256228,0.060498220640569395,False,False,False,False,False,False,False,False
+HS500,0.99,37,True,True,True,green,0.6837188612099644,0.20685053380782917,0.1094306049822064,37,True,True,True,green,0.6837188612099644,0.20685053380782917,0.1094306049822064,False,False,False,False,False,False,False,False
+EWMA,0.99,57,True,False,True,yellow,0.20862989323843417,0.7001779359430605,0.09119217081850534,58,True,False,True,yellow,0.19172597864768684,0.7050711743772242,0.10320284697508897,True,False,False,False,False,True,True,True
+GARCH-N,0.99,46,True,False,True,yellow,0.40480427046263345,0.4870996441281139,0.10809608540925267,46,True,False,True,yellow,0.40480427046263345,0.4870996441281139,0.10809608540925267,False,False,False,False,False,False,False,False
+GARCH-t,0.99,29,False,False,False,green,0.8056049822064056,0.1943950177935943,0.0,29,False,False,False,green,0.8056049822064056,0.1943950177935943,0.0,False,False,False,False,False,False,False,False

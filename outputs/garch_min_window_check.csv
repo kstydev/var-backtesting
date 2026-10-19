@@ -1,0 +1,5 @@
+model,confidence,n_obs_main,actual_breaches_main,breach_rate_main,kupiec_reject_main,ind_reject_main,cc_reject_main,basel_latest_zone_main,share_red_main,n_obs_rob,actual_breaches_rob,breach_rate_rob,kupiec_reject_rob,ind_reject_rob,cc_reject_rob,basel_latest_zone_rob,share_red_rob,decision_changed
+GARCH-N,0.95,2497,130,0.052062474969963954,False,True,True,,,1997,107,0.05358037055583375,False,True,True,,,False
+GARCH-t,0.95,2497,142,0.056868241890268324,False,True,True,,,1997,112,0.05608412618928393,False,False,False,,,True
+GARCH-N,0.99,2497,46,0.0184221065278334,True,False,True,yellow,0.10809608540925267,1997,41,0.020530796194291438,True,False,True,yellow,0.13901601830663615,False
+GARCH-t,0.99,2497,29,0.011613936724068883,False,False,False,green,0.0,1997,27,0.013520280420630946,False,False,False,green,0.0,False

@@ -10,6 +10,14 @@ The project compares 1-day Value-at-Risk (VaR) models on a small European equity
 simple historical simulation to GARCH with fat tails. It backtests them the way bank risk-control
 teams do: breach counts, Kupiec and Christoffersen tests, and the Basel traffic light.
 
+![Daily portfolio returns with the 99% GARCH-t VaR line and breaches marked in red](outputs/breaches_GARCH-t_99.png)
+
+*Daily portfolio returns against the 99% GARCH-t VaR, with the 29 days the loss exceeded VaR marked in red.*
+
+![Basel traffic light: rolling 250-day breach counts of the 99% VaR models](outputs/traffic_light_99.png)
+
+*How many times each 99% VaR model was breached in the previous 250 days, against the Basel green, yellow and red zones.*
+
 ## Data
 
 - **Stocks:** SAP.DE, SIE.DE, ALV.DE, BAS.DE, DTE.DE (Xetra, EUR) from Yahoo Finance via `yfinance`.
